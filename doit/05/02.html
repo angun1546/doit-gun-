@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인폼</title>
+</head>
+
+<body>
+  <!-- fieldset: 연관있는 폼요소를 그룹핑 -->
+  <!-- label: input의 설명자
+      label 의 for 속성은 래핑되지 않은 구조의 input과 연결
+  -->
+  <form action="#" method="post">
+    <fieldset>
+      <legend>로그인</legend>
+      <label>아이디: <input type="text"></label>
+      <br>
+      <label for="pw">비밀번호:</label>
+      <input type="password" id="pw">
+      <br>
+      <input type="submit" value="로그인">
+      <!-- input type=submit
+      클릭시 form 태그에 지정된 action 속성의 경로로 데이터 전송
+      -->
+      <input type="reset" value="초기화">
+    </fieldset>
+  </form>
+</body>
+
+</html>

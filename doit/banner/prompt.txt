@@ -1,0 +1,5 @@
+1. images/banner.jpg 이미지를 분석해서 그대로 html, css로 구현해
+2. 배경 모델 이미지 경로: images/예쁜여자.png
+3. 좌측 커피잔 이미지 경로: images/coffee.png
+4. 우측 하단 로고 이미지 경로: images/logo.png
+

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html의 기본문법</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      h1 {
+        color: #333;
+        border-bottom: 3px solid #007bff;
+        padding-bottom: 10px;
+      }
+      h2 {
+        color: #555;
+        margin-top: 30px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+      }
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      tr:hover {
+        background-color: #e3f2fd;
+      }
+      code {
+        background-color: #f0f0f0;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: 'Courier New', monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML의 기본문법</h1>
+    <p>
+      HTML문서는 웹페이지의 뼈대 역할을 함 <br />
+      계층구조를 가진다
+    </p>
+    <h2>태그의 사용법</h2>
+    <p>
+      태그는 여는 태그와 닫는태그로 구성됨. <br />
+      태그의 표시는 &lt;&gt; 괄호를 사용한다.
+      &lt;태그&gt;&lt;/태그&gt;
+    </p>
+    <p>태그를 표시하는 기호는 &lt; &gt; 이며 괄호내에 명령어를 넣어 사용한다.</p>
+
+    <h2>HTML Entity 코드 정리</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>표시</th>
+          <th>Entity 코드</th>
+          <th>설명</th>
+          <th>예시</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&lt;</td>
+          <td><code>&amp;lt;</code></td>
+          <td>보다 작음 (Less than)</td>
+          <td>5 &lt; 10</td>
+        </tr>
+        <tr>
+          <td>&gt;</td>
+          <td><code>&amp;gt;</code></td>
+          <td>보다 큼 (Greater than)</td>
+          <td>10 &gt; 5</td>
+        </tr>
+        <tr>
+          <td>&amp;</td>
+          <td><code>&amp;amp;</code></td>
+          <td>앰퍼샌드 (Ampersand)</td>
+          <td>A &amp; B</td>
+        </tr>
+        <tr>
+          <td>&quot;</td>
+          <td><code>&amp;quot;</code></td>
+          <td>큰따옴표 (Quotation mark)</td>
+          <td>&quot;Hello&quot;</td>
+        </tr>
+        <tr>
+          <td>&apos;</td>
+          <td><code>&amp;apos;</code></td>
+          <td>작은따옴표 (Apostrophe)</td>
+          <td>&apos;World&apos;</td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td><code>&amp;nbsp;</code></td>
+          <td>공백 (Non-breaking space)</td>
+          <td>Word&nbsp;Space</td>
+        </tr>
+        <tr>
+          <td>&copy;</td>
+          <td><code>&amp;copy;</code></td>
+          <td>저작권 기호</td>
+          <td>&copy; 2025</td>
+        </tr>
+        <tr>
+          <td>&reg;</td>
+          <td><code>&amp;reg;</code></td>
+          <td>등록 상표</td>
+          <td>Brand&reg;</td>
+        </tr>
+        <tr>
+          <td>&trade;</td>
+          <td><code>&amp;trade;</code></td>
+          <td>상표</td>
+          <td>Trademark&trade;</td>
+        </tr>
+        <tr>
+          <td>&euro;</td>
+          <td><code>&amp;euro;</code></td>
+          <td>유로 기호</td>
+          <td>&euro; 100</td>
+        </tr>
+        <tr>
+          <td>&pound;</td>
+          <td><code>&amp;pound;</code></td>
+          <td>파운드 기호</td>
+          <td>&pound; 50</td>
+        </tr>
+        <tr>
+          <td>&yen;</td>
+          <td><code>&amp;yen;</code></td>
+          <td>엔 기호</td>
+          <td>&yen; 1000</td>
+        </tr>
+        <tr>
+          <td>&times;</td>
+          <td><code>&amp;times;</code></td>
+          <td>곱하기 기호</td>
+          <td>2 &times; 3 = 6</td>
+        </tr>
+        <tr>
+          <td>&divide;</td>
+          <td><code>&amp;divide;</code></td>
+          <td>나누기 기호</td>
+          <td>6 &divide; 2 = 3</td>
+        </tr>
+        <tr>
+          <td>&bull;</td>
+          <td><code>&amp;bull;</code></td>
+          <td>원형 글머리</td>
+          <td>&bull; Item</td>
+        </tr>
+        <tr>
+          <td>&hellip;</td>
+          <td><code>&amp;hellip;</code></td>
+          <td>줄임표</td>
+          <td>Continue&hellip;</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

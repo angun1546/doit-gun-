@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배너</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('images/banner.jpg') center/cover;
+      overflow: hidden;
+    }
+
+    .model-img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
+
+    .coffee-img {
+      position: absolute;
+      left: 50px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 200px;
+      height: auto;
+    }
+
+    .logo-img {
+      position: absolute;
+      right: 50px;
+      bottom: 50px;
+      width: 150px;
+      height: auto;
+    }
+
+    @media (max-width: 768px) {
+      .coffee-img {
+        left: 20px;
+        width: 120px;
+      }
+
+      .logo-img {
+        right: 20px;
+        bottom: 20px;
+        width: 100px;
+      }
+    }+
+  </style>
+</head>
+
+<body>
+  <div class="banner">
+    <!-- 배경 모델 이미지 -->
+    <img src="images/예쁜여자.png" alt="모델" class="model-img">
+    <!-- 좌측 커피잔 -->
+    <img src="images/coffee.png" alt="커피" class="coffee-img">
+    <!-- 우측 하단 로고 -->
+    <img src="images/logo.png" alt="로고" class="logo-img">
+  </div>
+</body>
+
+</html>

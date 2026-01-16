@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      margin-bottom: 20px;
+      border: 1px solid;
+    }
+
+    span {
+      display: block;
+    }
+
+    /* 뷰포트 단위 상대단위: 브라우저화면*/
+    .viewport {
+      background-color: lemonchiffon;
+      width: 50vw;
+      height: 50vh;
+    }
+
+    .viewport .b1 {
+      background-color: red;
+      width: 100vw;
+      padding:10px;
+    }
+    /* 퍼센트 단위 상대단위: 부모기준*/
+    .percent {
+      background-color: lemonchiffon;
+      width: 50%;
+    }
+
+    .percent .b1 {
+      background-color: red;
+      width: 100%;
+    }
+    .percent .b2{
+      background-color: green;
+      width: 80vw;
+    }
+
+    .viewport .b2{
+       background-color: green;
+       width: 80%;
+       height: 30px;
+    }
+    .percent{
+      height: 500px;
+    }
+     .percent .b1, .percent .b2{
+      width: 30%;
+      float:left;
+     }
+  </style>
+</head>
+
+<body>
+  <h2>뷰포트</h2>
+  <div class="viewport">
+    <span class="b1"></span>
+    <span class="b2"></span>
+  </div>
+  <h2>퍼센트</h2>
+  <div class="percent">
+    <span class="b1">ㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴ</span>
+    <span class="b2">ㄱㄱㄱ</span>
+  </div>
+</body>
+
+</html>

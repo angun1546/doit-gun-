@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .wrap {
+      width: 1000px;
+      margin: 0 auto;
+    }
+    header,
+    nav,
+    footer {
+      width: 1000px;
+      height: 100px;
+      background-color: #17ad65;
+      color: white;
+    }
+    side_left{
+      width: 30%;
+      height: 600px;
+
+      background-color: #0f603957;
+      color: white;
+      align-content: center;
+    }
+    side_right{
+      width: 40%;
+      height: 600px;
+      background-color: #3bb37957;
+      color: white;
+      align-content: center;
+    }
+    contents{
+      width: 30%;
+      height: 600px;
+      background-color: #bf2727;
+      color: white;
+      text-align: center;
+
+    }
+    footer {
+    }
+    .fl {
+      float: left;
+    }
+    .fl{text-align: center;}
+
+    /*코드의 최적화 -> 리팩토링*/
+
+  </style>
+
+  <body>
+    <div class="wrap">
+      <header>header</header>
+      <nav>nav</nav>
+      <side_left class="fl">side_left</side_left>
+      <contents class="fl">contents</contents>
+      <side_right >side_right</side_right>
+      <footer class="fl">footer</footer>
+    </div>
+  </body>
+</html>

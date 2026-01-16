@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상 선택자</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      gap: 20px;
+    }
+
+    .container {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    /* Do it! 가상 선택자를 사용해 항목 선택하기 */
+    /* .container 하위 요소중 첫째  */
+    .container :first-child {
+      background-color: #fc2;
+    }
+
+    /* .container 하위 p요소중 첫째  */
+    .container p:first-child {
+      background-color: #cf2;
+    }
+
+    /* .container 하위 요소중 막내  */
+    .container :last-child {
+      background-color: #2cf;
+    }
+
+    /* .container 하위 div가 유일하면  */
+    .container div:only-child {
+      color: red;
+      border-bottom:3px dashed red;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p>첫 번째</p>
+    <div>두 번째</div>
+    <p>세 번째</p>
+    <div>네 번째</div>
+  </div>
+  <div class="container">
+    <div>혼자~</div>
+  </div>
+</body>
+
+</html>

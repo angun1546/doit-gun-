@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>html의 기본문법</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f5f5f5;
+      }
+      h1 {
+        color: #333;
+        border-bottom: 3px solid #007bff;
+        padding-bottom: 10px;
+      }
+      h2 {
+        color: #555;
+        margin-top: 30px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: white;
+        margin: 20px 0;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px;
+        text-align: left;
+      }
+      th {
+        background-color: #007bff;
+        color: white;
+        font-weight: bold;
+      }
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      tr:hover {
+        background-color: #e3f2fd;
+      }
+      code {
+        background-color: #f0f0f0;
+        padding: 2px 6px;
+        border-radius: 3px;
+        font-family: "Courier New", monospace;
+        font-weight: bold;
+      }
+      .block {
+        background-color: #e8f5e9;
+      }
+      .inline {
+        background-color: #fff3e0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML의 기본문법</h1>
+    <p>
+      HTML문서는 웹페이지의 뼈대 역할을 함 <br />
+      계층구조를 가진다
+    </p>
+    <h2>태그의 사용법</h2>
+    <p>
+      태그는 여는 태그와 닫는태그로 구성됨. <br />
+      태그의 표시는 &lt;&gt; 괄호를 사용한다. &lt;태그&gt;&lt;/태그&gt;
+    </p>
+    <p>
+      태그를 표시하는 기호는 &lt; &gt; 이며 괄호내에 명령어를 넣어 사용한다.
+      공백을 표시할때는
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;를
+      사용한다.
+    </p>
+
+    <h2>태그의 분류</h2>
+    <p>태그가 웹페이지에서 차지하는 영역에 따라 두가지로 나눌 수 있다.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>분류</th>
+          <th>설명</th>
+          <th>특징</th>
+          <th>태그 예시</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="block">
+          <td>
+            <strong>블록레벨<br />(Block Level)</strong>
+          </td>
+          <td>웹페이지의 화면 전체 너비를 차지</td>
+          <td>
+            • 새로운 줄에서 시작<br />
+            • 전체 너비를 차지<br />
+            • 위아래 마진 적용됨<br />
+            • 가로/세로 크기 조정 가능
+          </td>
+          <td>
+            <code>&lt;h1&gt;~&lt;h6&gt;</code><br />
+            <code>&lt;p&gt;</code><br />
+            <code>&lt;div&gt;</code><br />
+            <code>&lt;ul&gt;, &lt;ol&gt;</code><br />
+            <code>&lt;li&gt;</code><br />
+            <code>&lt;section&gt;</code><br />
+            <code>&lt;header&gt;, &lt;footer&gt;</code>
+          </td>
+        </tr>
+        <tr class="inline">
+          <td>
+            <strong>인라인레벨<br />(Inline Level)</strong>
+          </td>
+          <td>웹페이지에서 콘텐츠의 너비만큼 차지</td>
+          <td>
+            • 같은 줄에 배치<br />
+            • 콘텐츠 크기만 차지<br />
+            • 좌우 마진만 적용됨<br />
+            • 가로/세로 크기 조정 불가
+          </td>
+          <td>
+            <code>&lt;a&gt;</code><br />
+            <code>&lt;span&gt;</code><br />
+            <code>&lt;strong&gt;, &lt;em&gt;</code><br />
+            <code>&lt;img&gt;</code><br />
+            <code>&lt;button&gt;</code><br />
+            <code>&lt;input&gt;</code><br />
+            <code>&lt;label&gt;</code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>블록 레벨 태그 상세</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>태그</th>
+          <th>설명</th>
+          <th>사용 예시</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>&lt;h1&gt;~&lt;h6&gt;</code></td>
+          <td>제목 태그 (h1이 가장 큼)</td>
+          <td>&lt;h1&gt;주제&lt;/h1&gt;</td>
+        </tr>
+        <tr>
+          <td><code>&lt;p&gt;</code></td>
+          <td>단락 (Paragraph)</td>
+          <td>&lt;p&gt;본문 내용&lt;/p&gt;</td>
+        </tr>
+        <tr>
+          <td><code>&lt;div&gt;</code></td>
+          <td>콘텐츠 분할 용도</td>
+          <td>&lt;div&gt;내용&lt;/div&gt;</td>
+        </tr>
+        <tr>
+          <td><code>&lt;ul&gt;, &lt;ol&gt;</code></td>
+          <td>비순서/순서 리스트</td>
+          <td>&lt;ul&gt;&lt;li&gt;항목&lt;/li&gt;&lt;/ul&gt;</td>
+        </tr>
+        <tr>
+          <td><code>&lt;table&gt;</code></td>
+          <td>테이블 (표)</td>
+          <td>
+            &lt;table&gt;&lt;tr&gt;&lt;td&gt;셀&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>인라인 레벨 태그 상세</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>태그</th>
+          <th>설명</th>
+          <th>사용 예시</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>&lt;a&gt;</code></td>
+          <td>하이퍼링크</td>
+          <td>&lt;a href=&quot;url&quot;&gt;링크&lt;/a&gt;</td>
+        </tr>
+        <tr>
+          <td><code>&lt;span&gt;</code></td>
+          <td>인라인 콘텐츠 그룹</td>
+          <td>&lt;span&gt;텍스트&lt;/span&gt;</td>
+        </tr>
+        <tr>
+          <td><code>&lt;strong&gt;, &lt;em&gt;</code></td>
+          <td>강조 텍스트</td>
+          <td>
+            &lt;strong&gt;굵게&lt;/strong&gt;, &lt;em&gt;이탤릭&lt;/em&gt;
+          </td>
+        </tr>
+        <tr>
+          <td><code>&lt;img&gt;</code></td>
+          <td>이미지</td>
+          <td>&lt;img src=&quot;파일&quot; alt=&quot;설명&quot;&gt;</td>
+        </tr>
+        <tr>
+          <td><code>&lt;button&gt;</code></td>
+          <td>버튼</td>
+          <td>&lt;button&gt;클릭&lt;/button&gt;</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

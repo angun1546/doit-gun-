@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 500px;
+      height: 500px;
+      background-color: red;
+      margin: auto;
+      position: relative;
+    }
+
+    .box {
+      width: 10%;
+      height: 10%;
+      background-color: yellow;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform:translateX(-50%) translateY(-50%);
+      /* margin-left: -5%;
+      margin-top: -5%; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </div>
+</body>
+
+</html>

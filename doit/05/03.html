@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원정보입력</title>
+</head>
+
+<body>
+  <form action="register.php" method="post">
+    <fieldset>
+      <legend>회원정보입력</legend>
+      <!-- label+br+input+br*2 -->
+      <label for="uname">name: </label>
+      <br>
+      <input type="text" id="uname" placeholder="name write" value="니 이름"><br><br>
+      <label for="umail">email:</label>
+      <br>
+      <input type="email" id="umail"><br><br>
+      <label for="utel">tel:</label>
+      <br>
+      <input type="phone" id="utel"><br><br>
+      <p>성별</p>
+      <label>남성: <input type="radio" name="gender" value="male" checked></label>
+      <!-- label>input:radio -->
+      <label>여성: <input type="radio" name="gender" value="female"></label>
+
+      <p>취미</p>
+      <label><input type="checkbox" name="hobby" value="sports">스포츠</label>
+      <label><input type="checkbox" name="hobby" value="music"> 음악</label>
+      <label><input type="checkbox" name="hobby" value="coding"> 코딩</label>
+      <hr>
+      <p>국가:</p>
+      <select name="country" id="country">
+        <option>------선택하세요-----</option>
+        <option value="korea">대한민국</option>
+        <option value="usa">미국</option>
+        <option value="japen">일본</option>
+      </select>
+      <p>자기소개</p>
+      <textarea name="msg" id="msg" rows="4" cols="30"></textarea>
+      <hr>
+      <input type="color" name="color" id="color">
+      <input type="file" name="file" id="file"> <br>
+      <input type="number" name="amount" id="amount" min="0" max="6" step="2">
+      <input type="date" name="date" id="date">
+      <input type="datetime-local" name="time" id="time">
+      <br>
+      <input type="range" name="range" id="range" min="2" max="10" value="2" step="2">
+
+      <hr>
+
+
+      <input type="submit" value="전송">
+      <input type="button" value="취소">
+      <input type="reset" value="초기화">
+      <hr>
+      <button type="submit">전송</button>
+      <button>취소</button>
+    </fieldset>
+  </form>
+</body>
+
+</html>

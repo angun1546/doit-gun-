@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html의 기본 문법</title>
+  <style>
+    body {
+      font-family: 'Malgun Gothic', sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th {
+      background: #4CAF50;
+      color: white;
+      padding: 10px;
+      text-align: left;
+    }
+
+    td {
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background: #f5f5f5;
+    }
+
+    .tag {
+      font-family: 'Courier New', monospace;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    .example {
+      background: #f9f9f9;
+      border-left: 4px solid #4CAF50;
+      padding: 15px;
+      margin: 15px 0;
+    }
+
+    .code {
+      font-family: 'Courier New', monospace;
+      background: #333;
+      color: #0f0;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin: 10px 0;
+    }
+
+    .div-demo {
+      border: 2px solid #e74c3c;
+      background: #ffe6e6;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    .span-demo {
+      background: #e6f3ff;
+      padding: 2px 5px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #4CAF50;
+    }
+
+    .use-case {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin: 15px 0;
+    }
+
+    .block-case {
+      background: #e8f5e9;
+      border-left: 4px solid #4CAF50;
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .inline-case {
+      background: #e3f2fd;
+      border-left: 4px solid #2196F3;
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .warning {
+      background: #ffebee;
+      border-left: 4px solid #f44336;
+      padding: 15px;
+      margin: 15px 0;
+    }
+
+    .good {
+      background: #e8f5e9;
+      border-left: 4px solid #4CAF50;
+      padding: 15px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>HTML의 기본문법</h1>
+  <p> HTML문서는 웹페이지의 뼈대 역할을 함 <br> 계층구조를 가진다 </p>
+  <h2>태그의 사용법</h2>
+  <p>태그는 여는태그와 닫는태그로 구성됨 </p>
+  <p> 태그를 표시하는 기호는 &lt; &gt; 이며 괄호내에 명령어를 넣어 사용한다. 공백을 표시할때는
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 를 사용한다. </p>
+  <h2>태그의 분류</h2>
+  <p>태그가 웹페이지에서 차지하는 영역에 따라 두가지 나눌수 있다.</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>분류</th>
+        <th>특징</th>
+        <th>주요 태그</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>블록 레벨 (Block Level)</strong></td>
+        <td>웹페이지의 화면 전체 너비를 차지<br>줄바꿈이 자동으로 일어남</td>
+        <td>
+          <span class="tag">&lt;div&gt;</span>,
+          <span class="tag">&lt;p&gt;</span>,
+          <span class="tag">&lt;h1&gt;~&lt;h6&gt;</span>,
+          <span class="tag">&lt;ul&gt;</span>,
+          <span class="tag">&lt;ol&gt;</span>,
+          <span class="tag">&lt;li&gt;</span>,
+          <span class="tag">&lt;table&gt;</span>,
+          <span class="tag">&lt;form&gt;</span>,
+          <span class="tag">&lt;header&gt;</span>,
+          <span class="tag">&lt;footer&gt;</span>,
+          <span class="tag">&lt;section&gt;</span>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>인라인 레벨 (Inline Level)</strong></td>
+        <td>콘텐츠의 너비만큼만 차지<br>줄바꿈이 일어나지 않음</td>
+        <td>
+          <span class="tag">&lt;span&gt;</span>,
+          <span class="tag">&lt;a&gt;</span>,
+          <span class="tag">&lt;img&gt;</span>,
+          <span class="tag">&lt;strong&gt;</span>,
+          <span class="tag">&lt;em&gt;</span>,
+          <span class="tag">&lt;input&gt;</span>,
+          <span class="tag">&lt;label&gt;</span>,
+          <span class="tag">&lt;br&gt;</span>,
+          <span class="tag">&lt;button&gt;</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- div와 span 설명 추가 -->
+  <h2>div와 span 상세 설명</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>구분</th>
+        <th>div</th>
+        <th>span</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>타입</strong></td>
+        <td>블록 레벨 (Block Level)</td>
+        <td>인라인 레벨 (Inline Level)</td>
+      </tr>
+      <tr>
+        <td><strong>화면 차지</strong></td>
+        <td>웹페이지의 전체 너비를 차지</td>
+        <td>콘텐츠의 너비만큼만 차지</td>
+      </tr>
+      <tr>
+        <td><strong>줄바꿈</strong></td>
+        <td>줄바꿈이 자동으로 일어남</td>
+        <td>줄바꿈이 일어나지 않음</td>
+      </tr>
+      <tr>
+        <td><strong>용도</strong></td>
+        <td>큰 영역을 나누어 구조화</td>
+        <td>텍스트 일부를 강조하거나 스타일링</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>div 설명</h3>
+  <div class="example">
+    <p>div는 <strong>Division</strong>의 약자로, 웹페이지를 여러 섹션으로 나누는 데 사용하는 블록 레벨 태그입니다.</p>
+    <p><strong>특징:</strong></p>
+    <ul>
+      <li>전체 너비를 차지하므로 자동으로 줄바꿈</li>
+      <li>CSS로 크기, 배경색, 여백 등을 자유롭게 조절 가능</li>
+      <li>웹페이지의 전체 구조를 만드는 데 사용</li>
+    </ul>
+  </div>
+
+  <h3>div 시각적 예시:</h3>
+  <div class="div-demo">
+    이것은 첫 번째 div입니다. 전체 너비를 차지합니다.
+  </div>
+  <div class="div-demo">
+    이것은 두 번째 div입니다. 자동으로 새 줄에서 시작합니다.
+  </div>
+
+  <h3>span 설명</h3>
+  <div class="example">
+    <p>span은 텍스트나 콘텐츠의 일부에 스타일을 적용하거나 강조할 때 사용하는 인라인 레벨 태그입니다.</p>
+    <p><strong>특징:</strong></p>
+    <ul>
+      <li>콘텐츠의 너비만큼만 차지</li>
+      <li>같은 줄에 여러 개의 span을 나열할 수 있음</li>
+      <li>텍스트의 특정 부분을 강조하거나 색상을 변경할 때 사용</li>
+    </ul>
+  </div>
+
+  <h3>span 시각적 예시:</h3>
+  <p>
+    HTML은 <span class="span-demo">웹페이지의 구조</span>를 만들고,
+    CSS는 <span class="span-demo">스타일</span>을 적용합니다.
+  </p>
+
+  <h3>div vs span 비교</h3>
+  <p><strong>div 사용 (블록 레벨):</strong></p>
+  <div class="div-demo">첫 번째 div</div>
+  <div class="div-demo">두 번째 div - 새 줄에서 시작</div>
+
+  <p><strong>span 사용 (인라인 레벨):</strong></p>
+  <p>
+    <span class="span-demo">첫 번째 span</span>
+    <span class="span-demo">두 번째 span - 같은 줄에 표시</span>
+    <span class="span-demo">세 번째 span - 계속 같은 줄</span>
+  </p>
+
+  <h3>언제 어떤 것을 사용할까?</h3>
+  <div class="example">
+    <ul>
+      <li><strong>div 사용:</strong> 헤더, 네비게이션, 콘텐츠 영역, 푸터 등 큰 레이아웃 구성</li>
+      <li><strong>span 사용:</strong> 텍스트 일부를 빨간색으로 표시, 특정 단어 강조, 배지나 라벨 표시</li>
+    </ul>
+  </div>
+
+  <!-- 블록과 인라인 사용시 주의할점 추가 -->
+  <h2>블록과 인라인 사용 시 주의사항</h2>
+
+  <h3>블록 레벨 태그 사용 시 주의점</h3>
+
+  <div class="warning">
+    <h4>❌ 주의 1: 블록 태그 안에 블록 태그</h4>
+    <p><strong>문제:</strong> div나 p 안에 다른 블록 태그를 넣을 때 구조를 체계적으로 관리해야 합니다.</p>
+    <p><strong>나쁜 예시:</strong></p>
+    <div class="code">
+&lt;p&gt;
+  &lt;div&gt;이렇게 하면 안 됩니다&lt;/div&gt;
+&lt;/p&gt;
+    </div>
+    <p><strong>좋은 예시:</strong></p>
+    <div class="code">
+&lt;div&gt;
+  &lt;p&gt;이렇게 사용하세요&lt;/p&gt;
+&lt;/div&gt;
+    </div>
+  </div>
+
+  <div class="warning">
+    <h4>❌ 주의 2: 지나친 div 중첩</h4>
+    <p><strong>문제:</strong> div를 너무 많이 중첩하면 코드가 복잡해지고 유지보수가 어려워집니다.</p>
+    <p><strong>나쁜 예시:</strong></p>
+    <div class="code">
+&lt;div&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;div&gt;내용&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    </div>
+    <p><strong>좋은 예시:</strong></p>
+    <div class="code">
+&lt;div class="container"&gt;
+  &lt;p&gt;내용&lt;/p&gt;
+&lt;/div&gt;
+    </div>
+  </div>
+
+  <div class="warning">
+    <h4>❌ 주의 3: 블록 태그의 높이 설정</h4>
+    <p><strong>문제:</strong> 블록 태그는 기본적으로 콘텐츠의 높이만큼만 차지합니다. 높이를 명시적으로 설정하지 않으면 예상과 다를 수 있습니다.</p>
+    <p><strong>나쁜 예시:</strong></p>
+    <div class="code">
+&lt;div&gt;
+  전체 높이를 채우고 싶지만 설정하지 않음
+&lt;/div&gt;
+    </div>
+    <p><strong>좋은 예시:</strong></p>
+    <div class="code">
+&lt;div style="height: 200px; background: #eee;"&gt;
+  높이를 설정하여 명확하게 표시됨
+&lt;/div&gt;
+    </div>
+  </div>
+
+  <h3>인라인 레벨 태그 사용 시 주의점</h3>
+
+  <div class="warning">
+    <h4>❌ 주의 1: 인라인 태그에 너비와 높이 설정 불가</h4>
+    <p><strong>문제:</strong> 인라인 태그(span, strong, em 등)에는 width, height가 적용되지 않습니다.</p>
+    <p><strong>나쁜 예시:</strong></p>
+    <div class="code">
+&lt;span style="width: 200px; height: 100px;"&gt;
+  너비와 높이가 적용되지 않음
+&lt;/span&gt;
+    </div>
+    <p><strong>해결 방법:</strong> CSS에서 display 속성을 변경해야 합니다.</p>
+    <div class="code">
+&lt;span style="display: block; width: 200px; height: 100px;"&gt;
+  이제 너비와 높이가 적용됨
+&lt;/span&gt;
+    </div>
+  </div>
+
+  <div class="warning">
+    <h4>❌ 주의 2: 인라인 태그 안에 블록 태그</h4>
+    <p><strong>문제:</strong> span, strong, em 등 인라인 태그 안에 div, p 같은 블록 태그를 넣으면 안 됩니다.</p>
+    <p><strong>나쁜 예시:</strong></p>
+    <div class="code">
+&lt;span&gt;
+  &lt;div&gt;이렇게 하면 안 됩니다&lt;/div&gt;
+&lt;/span&gt;
+    </div>
+    <p><strong>좋은 예시:</strong></p>
+    <div class="code">
+&lt;div&gt;
+  &lt;span&gt;이렇게 사용하세요&lt;/span&gt;
+&lt;/div&gt;
+    </div>
+  </div>
+
+  <div class="warning">
+    <h4>❌ 주의 3: 인라인 태그의 여백 설정</h4>
+    <p><strong>문제:</strong> 인라인 태그는 margin-top, margin-bottom이 적용되지 않습니다.</p>
+    <p><strong>나쁜 예시:</strong></p>
+    <div class="code">
+&lt;span style="margin: 20px;"&gt;
+  위아래 여백이 적용되지 않음
+&lt;/span&gt;
+    </div>
+    <p><strong>해결 방법:</strong> padding을 사용하거나 display를 변경합니다.</p>
+    <div class="code">
+&lt;span style="padding: 10px; background: #eee;"&gt;
+  패딩으로 내부 여백 적용
+&lt;/span&gt;
+    </div>
+  </div>
+
+  <h3>일반적인 주의사항</h3>
+
+  <div class="warning">
+    <h4>⚠️ 주의 1: 의미있는 태그 선택</h4>
+    <p>모든 것을 div로만 만들지 마세요. 제목은 h1~h6, 강조는 strong, em을 사용하세요.</p>
+    <div class="code">
+❌ &lt;div style="font-size: 32px; font-weight: bold;"&gt;제목&lt;/div&gt;
+✓ &lt;h1&gt;제목&lt;/h1&gt;
+    </div>
+  </div>
+
+  <div class="warning">
+    <h4>⚠️ 주의 2: 인라인-블록 (Inline-Block)</h4>
+    <p>인라인처럼 배치하면서 블록의 속성을 원할 때는 CSS display 속성을 사용합니다.</p>
+    <div class="code">
+&lt;span style="display: inline-block; width: 100px; height: 50px;"&gt;
+  이제 너비와 높이가 적용됩니다
+&lt;/span&gt;
+    </div>
+  </div>
+
+  <div class="good">
+    <h4>✓ 좋은 습관</h4>
+    <ul>
+      <li>큰 영역을 나눌 때: div, section, header, footer 사용</li>
+      <li>텍스트 일부를 강조할 때: span, strong, em 사용</li>
+      <li>제목이 필요할 때: h1~h6 사용 (div 사용 금지)</li>
+      <li>목록이 필요할 때: ul, ol, li 사용</li>
+      <li>필요시 CSS의 display 속성으로 속성 변경</li>
+      <li>의미있는(semantic) HTML 구조 작성</li>
+    </ul>
+  </div>
+
+</body>
+
+</html>

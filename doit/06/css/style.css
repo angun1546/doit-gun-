@@ -1,0 +1,40 @@
+/* 외부 스타일 시트 작성하기 */
+h1 {
+  color: #005eff;
+  background-color: pink;
+  padding: 50px;
+}
+/* 관계선택자 */
+/* 자식 */
+body > h1 {
+  color: orange;
+}
+h1 > span {
+  background-color: yellow;
+}
+/* 자손 */
+body span {
+  background-color: blue;
+}
+/* 형제 */
+/* h1 + p { */
+h1 ~ p {
+  background-color: cyan;
+}
+
+/* ====================================  */
+/* ===Quiz===========================  */
+/* ====================================  */
+
+/* 1번 */
+span.accent.point {
+  font-size: 100px;
+}
+
+/* 2번 */
+p > span.accent.point{
+  color:white;
+}
+body p~p>span.accent.point{
+  font-size: 10px;
+}

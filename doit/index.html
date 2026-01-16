@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Archive</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Lato", sans-serif;
+        background: linear-gradient(135deg, #faf8f3 0%, #f5f1ed 100%);
+        color: #2c2416;
+        line-height: 1.6;
+      }
+
+      /* 헤더 - 미니멀 모던 스타일 */
+      header {
+        background: linear-gradient(
+          135deg,
+          #5a3d2a 0%,
+          #7a5436 50%,
+          #4a2f1f 100%
+        );
+        padding: 80px 20px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(212, 175, 153, 0.3);
+        box-shadow: 0 10px 40px rgba(90, 61, 42, 0.15);
+      }
+
+      header::before {
+        content: "";
+        position: absolute;
+        top: -50%;
+        right: -10%;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(
+          circle,
+          rgba(212, 175, 153, 0.08) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        animation: float 20s infinite ease-in-out;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(30px, -30px);
+        }
+      }
+
+      .book-icon {
+        display: inline-block;
+        width: 70px;
+        height: 55px;
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+        animation: bookHover 3s infinite ease-in-out;
+      }
+
+      @keyframes bookHover {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+
+      .book-icon::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 32px;
+        height: 55px;
+        background: linear-gradient(
+          to right,
+          #d4af99 0%,
+          #c9a66f 50%,
+          #d4af99 100%
+        );
+        border: 2px solid #f5f1ed;
+        border-radius: 0 6px 6px 0;
+        box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .book-icon::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 32px;
+        height: 55px;
+        background: linear-gradient(
+          to left,
+          #9d6d42 0%,
+          #7a5436 50%,
+          #9d6d42 100%
+        );
+        border: 2px solid #f5f1ed;
+        border-radius: 6px 0 0 6px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      h1 {
+        font-family: "Playfair Display", serif;
+        font-size: 56px;
+        font-weight: 700;
+        color: #f5f1ed;
+        letter-spacing: 4px;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 10px;
+      }
+
+      .banner-subtitle {
+        color: #d4af99;
+        font-size: 13px;
+        letter-spacing: 3px;
+        font-weight: 400;
+        position: relative;
+        z-index: 2;
+        text-transform: uppercase;
+      }
+
+      /* 메인 컨텐츠 */
+      main {
+        max-width: 1000px;
+        margin: 60px auto;
+        padding: 0 20px;
+      }
+
+      .section {
+        margin-bottom: 70px;
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      h2 {
+        font-family: "Playfair Display", serif;
+        font-size: 40px;
+        color: #5a3d2a;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      h2::before {
+        content: "";
+        display: inline-block;
+        width: 40px;
+        height: 35px;
+        position: relative;
+        flex-shrink: 0;
+        background: linear-gradient(
+              to right,
+              #d4af99 0%,
+              #c9a66f 50%,
+              #d4af99 100%
+            )
+            0 0 / 19px 35px no-repeat,
+          linear-gradient(to left, #9d6d42 0%, #7a5436 50%, #9d6d42 100%) 21px 0 /
+            19px 35px no-repeat;
+        border: 1.5px solid #5a3d2a;
+        border-radius: 1px 3px 3px 1px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      h2::after {
+        content: "";
+        flex-grow: 1;
+        height: 1px;
+        background: linear-gradient(to right, #d4af99, transparent);
+      }
+
+      /* 번호 리스트 정확한 스타일 */
+      .section ol {
+        list-style: none;
+        display: grid;
+        gap: 15px;
+        counter-reset: item; /* 섹션마다 번호 초기화 */
+      }
+
+      .section li {
+        counter-increment: item;
+        position: relative;
+        padding-left: 45px;
+        transition: 0.3s;
+      }
+  
+
+      .section li::before {
+        content: counter(item);
+        position: absolute;
+        left: 0;
+        top: 2px;
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, #d4af99, #c9a66f);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        color: #5a3d2a;
+        box-shadow: 0 4px 12px rgba(212, 175, 153, 0.3);
+        transition: 0.3s;
+      }
+
+      .section li:hover::before {
+        transform: scale(1.1) translateY(-3px);
+      }
+section:nth-of-type(1) ol li a {
+  color: #e7cfbf !important;
+}
+
+/* 02 */
+.section:nth-of-type(2) ol li a {
+  color: #967d61 !important;
+}
+
+/* 03 */
+.section:nth-of-type(3) ol li a {
+  color: #835b35 !important;
+}
+
+/* 04 */
+.section:nth-of-type(4) ol li a {
+  color: #6b431c !important;
+}
+
+/* 05 */
+.section:nth-of-type(5) ol li a {
+  color: #533316 !important;}
+/* 06 */
+.section:nth-of-type(6) ol li a {
+  color: #2c1602 !important;}
+      
+      a {
+        color: #5a3d2a;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 15px;
+        position: relative;
+        display: inline-block;
+      }
+
+      a:hover {
+        color: #7a5436;
+        transform: translateX(3px);
+      }
+
+      a::before {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(to right, #d4af99, #7a5436);
+        transition: width 0.35s;
+      }
+
+      a:hover::before {
+        width: 100%;
+      }
+
+      /* 푸터 */
+      footer {
+        text-align: center;
+        padding: 50px 20px;
+        color: #7a5436;
+        border-top: 1px solid rgba(212, 175, 153, 0.3);
+        margin-top: 80px;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="book-icon"></div>
+      <h1>Study Archive</h1>
+      <p class="banner-subtitle">CODING CLASS PORTFOLIO</p>
+    </header>
+
+    <main>
+      <section class="section">
+        <h2>01</h2>
+        <ol>
+          <li><a href="01/do.html">빈문서</a></li>
+          
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2>02</h2>
+        <ol>
+          <li><a href="02/index.html">웹개발입문</a></li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2>03</h2>
+        <ol>
+          <li><a href="03/index.html">웹문서기초</a></li>
+          <li><a href="03/comment.html">상대경로 표기</a></li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2>04</h2>
+        <ol>
+          <li><a href="04/quiz-10.html">수습국원 공모</a></li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2>05</h2>
+        <ol>
+          <li><a href="05/03.html">로그인 폼</a></li>
+          <li><a href="banner/index.html">카페배너</a></li>
+        </ol>
+      </section>
+      <section class="section">
+        <h2>06</h2>
+        <ol>
+          <li><a href="06/cascading.html">케스케이딩</a></li>
+          <li><a href="06/class.html">클래스</a></li>
+          <li><a href="06/css.html">css</a></li>
+          <li><a href="06/stylesheet-1.html">스타일시트1</a></li>
+          <li><a href="06/inline.html">인라인</a></li>
+          <li><a href="06/no-style.html">노 스타일</a></li>
+          <li><a href="06/universe.html">유니버스</a></li>
+          <li><a href="06/entity.html">앤티티코드</a></li>
+          <li><a href="06/index.html">인덱스코드</a></li>
+        </ol>
+      </section>
+
+      <section class="section">
+        <h2>07</h2>
+        <ol>
+          <li><a href="07/font.html">폰트 설정</a></li>
+          <li><a href="07/icon.html">아이콘 폰트</a></li>
+          <li><a href="07/color.html">색상 설정</a></li>
+          <li><a href="07/text-align.html">텍스트 정렬</a></li>
+          <li><a href="07/text-decoration.html">텍스트 꾸미기</a></li>
+          <li><a href="07/text-shadow.html">텍스트 그림자</a></li>
+          <li><a href="07/text-transform.html">텍스트 변환</a></li>
+          <li><a href="07/webfont.html">웹폰트 사용</a></li>
+          <li><a href="07/spacing.html">줄 간격</a></li>
+          <section class="section">
+
+        <h2>08</h2>
+        <ol>
+          <li><a href="08/block.html">블록 요소/</a></li>
+          <li><a href="08/border-8.html">테두리 스타일</a></li>
+          <li><a href="08/box-shadow.html">박스 그림자</a></li>
+          <li><a href="08/box-sizing.html">박스 사이즈</a></li>
+          <li><a href="08/box-width.html">박스 높이,너비</a></li>
+          <li><a href="08/boxmodel.html">박스 모델</a></li>
+          <li><a href="08/button.html">버튼</a></li>
+          <li><a href="08/display.html">디스플레이</a></li>
+          <li><a href="08/padding.html">패딩</a></li>
+          <li><a href="08/position-4.html">포지션</a></li>
+          <li><a href="08/margin-3.html">마진설정</a></li>
+          <li><a href="08/layout2.html">레이아웃</a></li>
+          <li><a href="08/test.html">테스트</a></li>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Study Archive</p>
+      <p>Coding Class Portfolio</p>
+    </footer>
+  </body>
+</html>
