@@ -8,7 +8,15 @@
 <body>
     <script>
       // Do it! 사용자가 입력한 숫자가 3의 배수인지 판별하기
+let userNum = prompt();
 
+        if (userNum !== null) {
+            if (parseInt(userNum) % 3 === 0) {
+                alert('3의 배수 입니다');
+            } else
+                alert('3의 배수가 아닙니다')
+        } else
+            alert('입력이 취소 되었습니다.')
     </script>
 </body>
 </html>

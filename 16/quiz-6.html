@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3의 배수 조건문</title>
+  </head>
+  <body>
+    <script>
+      let num = prompt("3의 배수")
+      switch (num) {
+        case null:
+          alert("입력취소");
+          break;
+
+        default:
+          parseInt(num) % 3 === 0 ? alert("3의배수") : alert("3의 배수아님");
+
+          break;
+      }
+    </script>
+  </body>
+</html>
