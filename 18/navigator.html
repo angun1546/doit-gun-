@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //브라우저정보알아내기
+      const browserInfo ={
+        //사용자 에이전트 문자열
+        { UserAgent: navigator.userAgent };
+      //브라우저 이름
+      appName: navigator.appName,
+      appVersion: navigator.appVersion,
+      platform: navigator.platform,}
+      console.log(browserInfo.userAgent);
+      console.log(browserInfo.appName);
+      console.log(browserInfo.appVersion);
+      console.log(browserInfo.platform);
+    </script>
+  </body>
+</html>

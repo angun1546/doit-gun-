@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        margin: 20px 0 0 0;
+        font-size: 1.2em;
+        text-align: center;
+      }
+      .display {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <p>현재 시간은<span class="display"></span></p>
+    <script>
+      function displayTime() {
+        let now = new Date();
+        let currentTime = now.toLocaleTimeString();
+        document.querySelector(".display").innerHTMLcurrentTime;
+      }
+
+      setInterval(displayTime, 1000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, molestiae?
+      Ut quia nihil quas recusandae nam ratione, soluta laboriosam vero quidem
+      ipsam deserunt molestias officiis amet praesentium eius? Consequatur,
+      quae!
+    </p>
+    <button onclick="chC()">왜 쌤은 빨간색이야!</button>
+    <script>
+            // 프로퍼티로 넣기
+            const btn = document.querySelector("#change");
+            btn.onclick = chC;
+
+            <!-- 태그속성으로 넣기     -->
+
+            <!-- 메서드로 넣기 -->
+      btn.addEventListener('mouseover',function() {chC('#f0f')})
+
+            function chC(a) {
+              document.querySelector("p").style.color = "#f00";
+            }
+             { document.querySelector("p").style.background = a;
+            }
+    </script>
+  </body>
+</html>

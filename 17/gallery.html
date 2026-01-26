@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="gallery">
+    <a href="#" onclick="prev()">prev</a>
+    <div class="thumbs">
+      <img src="img/img1.jpg" alt="">
+    </div>
+    <a href="#" onclick="next()">next</a>
+    <a href="#" onclick="stopFn()">stop</a>
+    <a href="#" onclick="auto()">play</a>
+  </div>
+  <script>
+    let idx = 1;
+    let total = 7;
+    let stop;
+    document.querySelector('.thumbs img').style.width = "300px"
+    function prev() {
+      idx--;
+      if (idx < 1) idx = total;
+      document.querySelector('.thumbs img').src = `img/img${idx}.jpg`;
+    }
+    function next() {
+      idx++;
+      if (idx > total) idx = 1;
+      document.querySelector('.thumbs img').src = `img/img${idx}.jpg`;
+    }
+    function stopFn() {
+      clearInterval(stop)
+      //stop = setInterval(next, 1000)
+    }
+    function auto() {
+      stop = setInterval(next, 1000)
+    }
+    auto()
+  </script>
+</body>
+
+</html>

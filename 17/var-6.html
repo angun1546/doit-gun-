@@ -8,7 +8,17 @@
 <body>
 	<script>		
     // Do it! let 예약어로 선언한 변수 재선언하기
-
+function list() {
+        let ul = `<ul>`;
+        for (let i = 1; i <= 3000; i++) {
+          ul += `<li>순번${i}</li>`;
+        }
+        ul += `</ul>`;
+        console.log(ul);
+        document.body.insertAdjacentHTML;
+        ("beforeend", ul);
+      }
+      list();
 
   </script>
 </body>

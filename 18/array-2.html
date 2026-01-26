@@ -28,16 +28,26 @@
 			let chars = ["a", "b", "c", "d"];
 	
 			// 두 개의 배열 합치기
-	
+	let numchars=nums.concat(chars)
+	document.write(`nums와chars 합치면 ${numchars}`);
 	
 			// 배열 안의 요소 합치기
-	
-	
+	let string1=nums.join();
+	string1 = nums.join(`a`)
+	document.write(`${string1}`)
+	console.log(nums);
+	console.log(string1);
 			// 요소 추가 - 새로운 length 값 반환
 	
-	
+	let ret1=nums.push(4,5)
+	document.write(`<hr>push${nums}`)
+	let ret2=nums.unshift(0)
+	document.write(`<hr>unshift${nums}: 전체길이 ${nums.length}`)
 			// 요소 추출 - 꺼낸 요소 반환
-	
+	let popped1=chars.pop();
+	document.write(`<hr> ${popped1}`)
+	let popped2=chars.shift();
+	document.write(`<hr> ${popped2}`)
 		</script>
 	</div>
 </body>

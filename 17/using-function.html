@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>함수</title>
 </head>
-<body>
-	<script>		
-		// Do it! 함수를 사용하여 2와 3 더하기
 
-	</script>	
+<body>
+	<script>
+		// Do it! 함수를 사용하여 2와 3 더하기
+		// 매개변수와 인수를 사용해야함
+		// document.write()
+		// (명명)선언적함수
+		// (익명)화살표, 표현식, 즉시실행
+		function 선언적함수(a, b) {
+			document.write(`선언적함수 : ${a + b} <hr>`)
+		}
+
+		const 표현식함수 = function (a, b) {
+			document.write(`표현식함수: ${a + b}<hr>`)
+		}
+
+		const 화살표함수 = (a, b) => document.write(`화살표함수: ${a + b} <hr>`)
+
+		선언적함수(1, 2);
+		표현식함수(3, 5);
+		화살표함수(10, 500);
+
+		((a, b) => document.write(`즉시실행 함수: ${a + b} <hr>`))(5, 2);
+
+	</script>
 </body>
+
 </html>

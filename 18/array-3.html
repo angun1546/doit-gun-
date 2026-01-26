@@ -1,38 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Array 객체의 메서드</title>
-  <style>
-    body {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-			font-size: 1.2em;
-    }
-		hr {
-			width: 100%;			
-		}
-	</style>
-</head>
-<body>
-  <div class="container">
-    <script>
-      // Do it! 인수 개수에 따라 splice 메서드 사용하기
-      let study = ['html', 'css', 'web', 'jquery'];
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array 객체의 메서드</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-size: 1.2em;
+      }
+      hr {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <script>
+        // Do it! 인수 개수에 따라 splice 메서드 사용하기
+        let study = ["html", "css", "web", "jquery"];
 
-      // 인수가 1개일 경우
+        // 인수가 1개일 경우
+        let js = study.splice(2);
+        console.log(`반환된 배열:${js}`);
+        console.log(`변경된 배열:${study}`);
 
-
-      // 인수가 2개일 경우
-
-
-      // 인수가 3개 이상일 경우
-      
-    </script>
-  </div>
-</body>
+        // 인수가 2개일 경우: 첫번째 인수는 인덱스값, 두번째 인수는 삭제할 요소 갯수
+        let jquery = js.splice(1, 1);
+        console.log(`${jquery}`);
+        // 인수가 3개 이상일 경우: 첫번째 인수는 배열에서 삭제할 시작위치, 두번째 인수는 삭제할요소 갯수, 세번째는 삭제한 위치에 추가할 요소지정
+        let modernJS = js.splice(1, 0, "ts");
+        console.log(`${modernJS}`);
+        console.log(`${js}`);
+        /* array.splice(start.deletCount, item1, item2.......) 
+      start: 변경을 시작할 인덱스
+      deletecount: 제거할 요소 갯수
+      item1....:추가할 새 요소*/
+        const fruits = ["사과", "감", "배", "바나나", "포도"];
+        const remove = `${fruits.splice(2, 2)}`;
+        document.write(`지워진거:${remove}`);
+        document.write(`<hr>남은거:${fruits}`);
+      </script>
+    </div>
+  </body>
 </html>
