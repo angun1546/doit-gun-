@@ -25,7 +25,10 @@
   
 	<script>
 		// Do it! 이벤트 대상에 접근하기 - this 예약어 사용
-
+let cat=document.querySelector('#cat')
+cat.onclick=function(event){
+alert(`${this.src}`)
+}
 	</script>
 </body>
 </html>
