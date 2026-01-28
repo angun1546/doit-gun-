@@ -1,0 +1,20 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .c{fill:yellow;}
+    .r{stroke:purple; stroke-width:50;}
+  </style>
+    <style>
+    .r {
+      animation: rotates 3s infinite;
+    }
+    @keyframes rotate {
+      0%{transform:scale(0)}
+      50%{stroke-width: 1;}
+      100%{transform:scale(2)}
+    }
+  </style>
+  <circle class="c" cx="50" cy="50" r="25" fill="red"/>
+  <rect class="r" x="200" y="200" width="100" height="100" fill="blue" />
+
+</svg>
+
