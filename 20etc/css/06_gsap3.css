@@ -1,0 +1,57 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow: hidden;
+}
+
+#title {
+	width: 700px;
+	margin: 100px auto;
+}
+
+.container {
+	padding: 20px;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+p {
+	margin-bottom: 15px;
+}
+
+a {
+	display: block;
+	width: 100px;
+	padding: 10px;
+	background-color: blueviolet;
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	border-radius: 10px;
+}
+
+#thumbnail {
+	width: 420px;
+	height: 300px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.box {
+	width: 100px;
+	height: 100px;
+}
+
+.box1 {
+	background-color: red;
+}
+
+.box2 {
+	background-color: blue;
+}
