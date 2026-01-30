@@ -1,0 +1,14 @@
+gsap.to("box1", { x: 600, ease: "", duration: 5 });
+gsap.to("box2", { x: 600, ease: "power1", duration: 5 });
+gsap.to("box3", { x: 600, ease: "power2", duration: 5 });
+gsap.to("box4", { x: 600, ease: "power3", duration: 5 });
+gsap.to("box5", { x: 600, ease: "power4", duration: 5 });
+gsap.to("box6", { x: 600, ease: "back", duration: 5 });
+gsap.to("box7", { x: 600, ease: "elastic", duration: 5 });
+gsap.to("box8", { x: 600, ease: "bounce", duration: 5 });
+gsap.to("box9", { x: 600, ease: "rough", duration: 5 });
+gsap.to("box10", { x: 600, ease: "slow", duration: 5 });
+gsap.to("box11", { x: 600, ease: "steps(20)", duration: 5 });
+gsap.to("box12", { x: 600, ease: "circ", duration: 5 });
+gsap.to("box13", { x: 600, ease: "expo", duration: 5 });
+gsap.to("box14", { x: 600, ease: "sine", duration: 5 });

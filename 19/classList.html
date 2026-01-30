@@ -1,42 +1,100 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Web Programming</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    .container {
-      width: 400px;
-      margin: 0 auto;
-    }
-    ul {
-      list-style: none;
-    }
-    li {
-      font-size: 1.2em;
-      line-height: 2;
-    }
-    .blueText {
-      color: blue;
-    }
-    .drawBorder {
-      border: 1px solid #222;
-      padding: 5px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1 class="drawBorder">Web Programming</h1>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li class="blueText drawBorder">Javascript</li>
-    </ul>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Programming</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
 
-</body>
+      .container {
+        width: 400px;
+        margin: 0 auto;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        font-size: 1.2em;
+        line-height: 2;
+      }
+
+      .blueText {
+        color: blue;
+      }
+
+      .drawBorder {
+        border: 1px solid #222;
+        padding: 5px;
+      }
+
+      .redText {
+        color: red;
+      }
+
+      h1 {
+        user-select: none;
+      }
+
+      .side {
+        position: absolute;
+        width: 500px;
+        height: 100vh;
+        background-color: black;
+        left: -100%;
+        top: 0;
+        transition: all 0.5s;
+      }
+      .side.on {
+        left: 0;
+      }
+      .right {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 500px;
+        height: 100vh;
+        background-color: rgba(0, 0, 255, 0.2);
+        backdrop-filter: blur(20px);
+        transition: all 0.5s;
+        transform: translateX(200%);
+      }
+      .right.on {
+        transform: translateX(0%);
+      }
+      body {
+        position: relative;
+        width: 100vw;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="right"></div>
+    <div class="side"></div>
+    <div class="container">
+      <h1 class="drawBorder">Web Programming</h1>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li class="blueText drawBorder">Javascript</li>
+      </ul>
+    </div>
+    <script>
+      document.querySelector("h1").classList.add("add", "redText");
+      //요소노드 취득후 classList 속성 작성시 class 속성 읽기
+      const h1 = document.querySelector("h1");
+      h1.onclick = function () {
+        this.classList.toggle("redText");
+        this.classList.remove("redText");
+        document.querySelector(".side").classList.toggle("on");
+        document.querySelector(".right").classList.toggle("on");
+      };
+    </script>
+  </body>
 </html>
